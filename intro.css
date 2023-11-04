@@ -222,17 +222,17 @@ li a:hover {
         color: var(--primary-color);
         border: 1.6px solid var(--primary-color);
     }
-
+    
     .social a:hover {
         color: var(--primary-dark);
         background-color: var(--primary-color);
         box-shadow: 0 0 20px var(--primary-color);
     }
-
+    
     .logo a {
         color: #fff;
     }
-
+    
     .images::before {
         background: linear-gradient(145deg, #1f252e, #2e3239);
         box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #1b1f27;
@@ -329,7 +329,7 @@ li a:hover {
     header {
         height: auto;
     }
-
+    
     ul {
         background: #fff;
         width: 100%;
@@ -342,37 +342,37 @@ li a:hover {
         left: -100%;
         z-index: 111111;
     }
-
+    
     .menu {
         display: block;
         font-size: 1.5rem;
         font-weight: bold;
         color: #244D61;
     }
-
+    
     #click:checked~ul {
         left: 0%;
         transition: all 0.3s ease;
     }
-
+    
     .dark-mode .menu {
         color: var(--primary-color);
     }
-
+    
     .dark-mode ul {
         background: var(--primary-dark);
     }
-
+    
     .mode {
         position: absolute;
         right: 4rem;
     }
-
+    
     .images {
         width: 100%;
         margin: auto;
     }
-
+    
     .main {
         margin-top: 2rem;
     }
@@ -400,38 +400,6 @@ li a:hover {
     font-size: 1.2rem;
     line-height: 1.7;
 }
-.about-image img {
-    width: 200px; /* Set the desired width */
-    height: 200px; /* Set the desired height */
-    border: none; /* Remove the red border */
-    border-radius: 50%; /* Make it circular */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-    transition: filter 0.3s ease; /* Smooth transition for hover effect */
-
-    /* Apply a pseudo-element for decoration */
-    position: relative;
-    z-index: 1;
-}
-
-.about-image img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, #ffcd00 0%, #f7007e 100%); /* Add a gradient decoration */
-    border-radius: 50%; /* Make it circular */
-    opacity: 0; /* Initially invisible */
-    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.about-image img:hover::before {
-    opacity: 1; /* Make the decoration visible on hover */
-}
-
-
-
 
 /* Skills section Styles */
 .skills-section {
@@ -464,8 +432,6 @@ li a:hover {
     list-style: inside; /* Place the bullet inside the list item */
     list-style-type: disc; /* Set the bullet type to disc */
 }
-
-
 
 /* Portfolio section Styles */
 .portfolio-section {
@@ -533,3 +499,178 @@ li a:hover {
 }
 
 
+/* Mobile Styles */
+@media screen and (max-width: 600px) {
+    /* Navigation Styles */
+    header {
+        position: relative;
+        box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    
+    /* Add a media query to hide the header on small screens */
+    @media screen and (max-width: 600px) {
+        header {
+            height: auto;
+        }
+        
+        ul {
+            background: #fff;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            top: 3.4rem;
+            left: -100%;
+            z-index: 111111;
+        }
+        
+        #click:checked~ul {
+            left: 0%;
+            transition: all 0.3s ease;
+        }
+        
+        .menu {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #244D61;
+        }
+    }
+    
+    /* Section 1 Styles */
+    .main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main h3 {
+        font-size: 1.8rem;
+    }
+    
+    .main h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    
+    .main p {
+        font-size: 1.2rem;
+    }
+    
+    .social {
+        margin-top: 1.5rem;
+        gap: 1.2rem;
+    }
+    
+    .social a {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+    
+    /* Image Styles */
+    .images::before {
+        display: none;
+    }
+    
+    .images img {
+        border-radius: 0;
+        box-shadow: none;
+        transition: none;
+    }
+    
+    /* About section Styles */
+    .about-section {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+    
+    .about-section h2 {
+        font-size: 2rem;
+    }
+    
+    .about-text p {
+        font-size: 1.2rem;
+    }
+    
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Skills section Styles */
+    .skills-section {
+        background-color: var(--primary-dark);
+        color: #fff;
+        text-align: center;
+        padding: 2rem 1rem; /* Add more top padding to create space */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Align content at the top */
+        align-items: center;
+        height: auto; /* Let the height be determined by the content */
+    }
+    
+    .skills-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skills-list ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the skills horizontally */
+    }
+    
+    .skills-list li {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        list-style: inside;
+        list-style-type: disc;
+        background-color: var(--primary-color); /* Add background color to make the blocks solid */
+        padding: 10px 20px; /* Add padding for spacing */
+        border-radius: 10px; /* Add rounded corners for a clean look */
+        width: 100%; /* Ensure the blocks take up the full width */
+        text-align: center; /* Center text within the blocks */
+    }
+    
+    
+    /* Portfolio section Styles */
+    .portfolio-section {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+    
+    .portfolio-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .portfolio-item img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /* Contact section Styles */
+    .contact-section {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+    
+    .contact-info p {
+        font-size: 1.2rem;
+    }
+    
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+}
